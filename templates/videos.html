@@ -1,0 +1,28 @@
+<script type="text/javascript">
+function AppCtrl($scope, $sce) {
+    // ...
+    $scope.setProject = function (id) {
+      $scope.currentProject = $scope.projects[id];
+      $scope.currentProjectUrl = $sce.trustAsResourceUrl($scope.currentProject.url);
+    }
+}
+</script>
+   <ion-view title="Video Gallery">  
+    <ion-content class="has-header">
+        <div class="list">
+            <div class="item padding">
+                <p>Wohlig</p>
+<!--                <iframe style="overflow:hidden;width:100%;overflow:hidden;width:100%" width="100%" src="https://www.youtube.com/embed/b6ASHW4xvZw" frameborder="0" allowfullscreen></iframe>-->
+                
+            </div>
+<!--
+            <div class="item padding" ng-repeat="val in getvideo">
+                <p>{{val.title}}</p>
+                
+                <iframe id="ytplayer" type="text/html" src="{{val.video|trusted}}" style="overflow:hidden;height:200px;width:100%;" width="100%" frameborder="0" allowfullscreen></iframe>
+             </div>
+-->
+        </div>
+    </ion-content>
+</ion-view>
+
